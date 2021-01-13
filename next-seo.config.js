@@ -12,7 +12,7 @@ const SEO = {
     url: 'https://gfung.net',
     type: 'website',
     locale: 'en_gb',
-    image: [
+    images: [
       {
         url: 'https://gfung.net/og.webp',
         alt: title,
