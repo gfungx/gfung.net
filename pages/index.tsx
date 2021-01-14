@@ -1,25 +1,7 @@
 import { FunctionalComponent } from 'preact';
 import { motion } from 'framer-motion';
 
-const fadeIn = {
-  initial: { opacity: 0, y: 20 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: [0.6, -0.05, 0.01, 0.99]
-    }
-  }
-};
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
+import { fadeIn, stagger } from 'styles/animations';
 
 const Home: FunctionalComponent = () => (
   <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>

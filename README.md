@@ -7,6 +7,7 @@ Welcome to my personal website, my slice of the internet where I share my though
 - [Next.js](https://nextjs.org/)
 - [Preact](https://preactjs.com/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
 
 ## Running Locally
 
