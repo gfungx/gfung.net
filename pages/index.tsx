@@ -1,7 +1,51 @@
 import { FunctionalComponent } from 'preact';
+import { motion } from 'framer-motion';
+
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.6, -0.05, 0.01, 0.99]
+    }
+  }
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
 
 const Home: FunctionalComponent = () => (
-  <div className="font-bold">gfung.net</div>
+  <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+    <motion.div
+      className="flex flex-col justify-center items-start xs:max-w-xs sm:max-w-xl lg:max-w-5xl mx-auto mb-16 mt-64"
+      variants={stagger}
+    >
+      <motion.h1
+        className="text-3xl font-bold text-gray-800 pb-3"
+        variants={fadeIn}
+      >
+        Hey, I'm
+      </motion.h1>
+      <motion.h1
+        className="text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primaryLight to-primaryDark pb-5 mb-2"
+        variants={fadeIn}
+      >
+        Geoffrey
+      </motion.h1>
+      <motion.p className="text-gray-700" variants={fadeIn}>
+        I'm a developer and student from Sydney, 🇦🇺. You've found my personal
+        slice of the internet, where I hope to record my personal progress as a
+        front-end developer. Make yourself at home. ✌️
+      </motion.p>
+    </motion.div>
+  </motion.div>
 );
 
 export default Home;

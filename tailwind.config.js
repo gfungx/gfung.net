@@ -7,7 +7,11 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans]
-      }
+      },
+      gradientColorStops: () => ({
+        primaryLight: '#1cb5e0',
+        primaryDark: '#000096'
+      })
     }
   },
   variants: {

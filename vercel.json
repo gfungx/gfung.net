@@ -38,6 +38,10 @@
     {
       "source": "/twitter",
       "destination": "https://twitter.com/gfung_"
+    },
+    {
+      "source": "/github",
+      "destination": "https://github.com/gfungx"
     }
   ]
 }
