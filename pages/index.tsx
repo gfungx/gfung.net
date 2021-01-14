@@ -13,7 +13,7 @@ const Home: FunctionalComponent = () => (
       Hey, I'm
     </motion.h1>
     <motion.h1
-      className="text-5xl sm:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primaryLight to-primaryDark pb-2 mb-2 mobile:mb-1"
+      className="text-5xl sm:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primaryLight to-primaryDark pb-2 mb-2"
       variants={fadeIn}
     >
       Geoffrey
