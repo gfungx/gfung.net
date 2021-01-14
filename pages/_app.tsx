@@ -1,6 +1,7 @@
 import { DefaultSeo } from 'next-seo';
 
 import SEO from 'next-seo.config';
+import { MotionConfig, AnimationFeature, ExitFeature } from 'framer-motion';
 
 if (process.env.NODE_ENV === 'development') {
   require('preact/debug');
@@ -12,7 +13,9 @@ import 'styles/globals.css';
 const App = ({ Component, pageProps }: AppProps) => (
   <>
     <DefaultSeo {...SEO} />
-    <Component {...pageProps} />
+    <MotionConfig features={[AnimationFeature, ExitFeature]}>
+      <Component {...pageProps} />
+    </MotionConfig>
   </>
 );
 
