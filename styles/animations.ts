@@ -5,7 +5,8 @@ export const fadeIn = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: [0.6, -0.05, 0.01, 0.99]
+      ease: [0.6, -0.05, 0.01, 0.99],
+      staggerChildren: 0.1
     }
   }
 };
@@ -17,27 +18,7 @@ export const fadeToR = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: [0.6, -0.05, 0.01, 0.99]
-    }
-  }
-};
-
-export const fadeToRD = {
-  initial: { opacity: 0, x: -40 },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
       ease: [0.6, -0.05, 0.01, 0.99],
-      delay: 0.25
-    }
-  }
-};
-
-export const stagger = {
-  animate: {
-    transition: {
       staggerChildren: 0.1
     }
   }
