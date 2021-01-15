@@ -22,6 +22,19 @@ export const fadeToR = {
   }
 };
 
+export const fadeToRD = {
+  initial: { opacity: 0, x: -40 },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.6, -0.05, 0.01, 0.99],
+      delay: 0.25
+    }
+  }
+};
+
 export const stagger = {
   animate: {
     transition: {
