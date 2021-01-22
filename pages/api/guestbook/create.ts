@@ -13,12 +13,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       await client.connect();
 
-      const collection = client.db('guestbook').collection('comments');
+      const collection = client.db('guestbook').collection('entries');
 
       await collection.insertOne({
         name: req.body.name,
         comment: req.body.comment,
-        createdAt: new Date()
+        createdAt: req.body.createdAt
       });
     } finally {
       await client.close();

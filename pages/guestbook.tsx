@@ -21,7 +21,7 @@ const description = 'Sign my digital guestbook and share some wisdom.';
 const url = 'https://gfung.net/guestbook';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await fetcher('http://localhost:3000/api/guestbook/entries');
+  const data = await fetcher('/api/guestbook/entries');
 
   return {
     props: {
@@ -32,8 +32,9 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Guestbook: FunctionalComponent<GuestbookProps> = ({ entries }) => {
-  const { data } = useSWR('http://localhost:3000/api/guestbook/entries', fetcher, {
-    initialData: entries
+  const { data } = useSWR('/api/guestbook/entries', fetcher, {
+    initialData: entries,
+    refreshInterval: 100
   });
 
   return (
@@ -43,7 +44,7 @@ const Guestbook: FunctionalComponent<GuestbookProps> = ({ entries }) => {
         Welcome! Feel free to leave anything (within reason) down below. Maybe some wisdom or
         something educational, surprise me!
       </p>
-      <Add />
+      <Add initEntries={data} />
       <Entries entries={data} />
     </Container>
   );

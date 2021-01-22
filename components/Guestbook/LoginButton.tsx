@@ -1,10 +1,7 @@
 import { FunctionalComponent } from 'preact';
 import { signIn } from 'next-auth/client';
 
-type LoginButtonProps = {
-  type: 'google' | 'github';
-  name: 'Google' | 'Github';
-};
+import type { LoginButton as LoginButtonProps } from 'global';
 
 const LoginButton: FunctionalComponent<LoginButtonProps> = ({ type, name }) => (
   <button

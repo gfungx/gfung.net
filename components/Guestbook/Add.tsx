@@ -6,19 +6,19 @@ import { useForm } from 'react-hook-form';
 import Filter from 'bad-words';
 import { mutate } from 'swr';
 
+import type { LoginButton as LoginButtonType, Entries, Entry } from 'global';
 import LoginButton from 'components/Guestbook/LoginButton';
 import Message from 'components/Guestbook/Message';
+
+type AddProps = {
+  initEntries: Entries;
+};
 
 type Inputs = {
   comment: string;
 };
 
-type LoginButton = {
-  type: 'google' | 'github';
-  name: 'Google' | 'Github';
-};
-
-const loginButtons: LoginButton[] = [
+const loginButtons: LoginButtonType[] = [
   { type: 'google', name: 'Google' },
   { type: 'github', name: 'Github' }
 ];
@@ -30,10 +30,11 @@ const handleSignOut = async (router: NextRouter) => {
   router.reload();
 };
 
-const Add: FunctionalComponent = () => {
+const Add: FunctionalComponent<AddProps> = ({ initEntries }) => {
   let message: JSX.Element | null = null;
   const [session] = useSession();
   const router = useRouter();
+  const [entries, setEntries] = useState(initEntries);
   const {
     register,
     handleSubmit,
@@ -43,19 +44,24 @@ const Add: FunctionalComponent = () => {
   const [isPosted, setIsPosted] = useState(false);
 
   const onSubmit = async (data: Inputs) => {
-    await fetch('http://localhost:3000/api/guestbook/create', {
+    const payload: Entry = {
+      name: filter.clean(session?.user.name!),
+      comment: filter.clean(data.comment),
+      createdAt: new Date()
+    };
+
+    await fetch('/api/guestbook/create', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        name: filter.clean(session?.user.name!),
-        comment: filter.clean(data.comment)
-      })
+      body: JSON.stringify(payload)
     });
 
-    mutate('http://localhost:3000/api/guestbook/entries');
+    setEntries([payload, ...entries]);
+
+    mutate('/api/guestbook/entries', [payload, ...entries], true);
     setIsPosted(true);
   };
 

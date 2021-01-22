@@ -4,7 +4,7 @@ import format from 'date-fns/format';
 type EntryProps = {
   name: string;
   comment: string;
-  createdAt: string;
+  createdAt: Date;
 };
 
 const Entry: FunctionalComponent<EntryProps> = ({ name, comment, createdAt }) => (

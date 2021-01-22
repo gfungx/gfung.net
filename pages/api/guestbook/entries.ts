@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       const entries = await client
         .db('guestbook')
-        .collection('comments')
+        .collection('entries')
         .find({})
         .sort({ createdAt: -1 })
         .toArray();
