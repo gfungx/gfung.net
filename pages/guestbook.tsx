@@ -21,11 +21,11 @@ const description = 'Sign my digital guestbook and share some wisdom.';
 const url = 'https://gfung.net/guestbook';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await fetcher('/api/guestbook/entries');
+  const entries = await fetcher('/api/guestbook/entries');
 
   return {
     props: {
-      entries: data
+      entries
     },
     revalidate: 60
   };
