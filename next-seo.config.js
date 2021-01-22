@@ -4,6 +4,7 @@ const description =
 
 const SEO = {
   title,
+  titleTemplate: '%s - Geoffrey Fung',
   description,
   canonical: 'https://gfung.net',
   openGraph: {

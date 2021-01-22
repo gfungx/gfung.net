@@ -1,4 +1,6 @@
-export const fadeIn = {
+import { Variants } from 'framer-motion';
+
+export const fadeIn: Variants = {
   initial: { opacity: 0, y: 20 },
   animate: {
     y: 0,

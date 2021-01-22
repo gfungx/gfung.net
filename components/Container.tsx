@@ -1,14 +1,48 @@
 import { FunctionalComponent } from 'preact';
-import { m } from 'framer-motion';
+import { NextSeo } from 'next-seo';
+import { m, Variants } from 'framer-motion';
 
-const Container: FunctionalComponent = ({ children }) => (
-  <m.div
-    className="flex flex-col justify-center items-start max-w-xs sm:max-w-xl lg:max-w-5xl mx-auto mb-16 mt-40 sm:mt-64"
-    initial="initial"
-    animate="animate"
-  >
-    {children}
-  </m.div>
+import { fadeIn } from 'styles/animations';
+
+type ContainerProps = {
+  SEO: {
+    title: string;
+    description: string;
+    url: string;
+  };
+  styles?: string;
+  margin?: string;
+  variants?: Variants;
+};
+
+const Container: FunctionalComponent<ContainerProps> = ({
+  children,
+  SEO: { title, description, url },
+  styles,
+  margin = 'max-w-xs sm:max-w-md lg:max-w-2xl mt-24 sm:mt-40',
+  variants = fadeIn
+}) => (
+  <>
+    <NextSeo
+      title={title}
+      description={description}
+      canonical={url}
+      openGraph={{
+        title,
+        description,
+        url
+      }}
+    />
+    <m.div
+      className={`flex flex-col justify-center items-start mx-auto mb-16 ${styles} ${margin}`}
+      initial="initial"
+      animate="animate"
+    >
+      <m.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} variants={variants}>
+        {children}
+      </m.div>
+    </m.div>
+  </>
 );
 
 export default Container;

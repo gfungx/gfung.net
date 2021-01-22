@@ -8,6 +8,7 @@ Welcome to my personal website, my slice of the internet where I share my though
 - [Preact](https://preactjs.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
+- [MongoDB](https://www.mongodb.com/)
 
 ## Running Locally
 

@@ -11,14 +11,7 @@
 
 body {
   background-color: rgba(252, 252, 252);
-}
-
-.landing-super {
-  @apply text-lg sm:text-3xl font-bold text-gray-800 pb-3;
-}
-
-.landing-hero {
-  @apply font-bold bg-clip-text text-transparent bg-gradient-to-r from-primaryLight to-primaryDark pb-2 mb-2;
+  @apply text-gray-800;
 }
 
 .landing-text {
