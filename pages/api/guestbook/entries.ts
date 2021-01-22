@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .sort({ createdAt: -1 })
         .toArray();
 
-      res.json(entries);
+      res.send(entries);
     } finally {
       await client.close();
     }
