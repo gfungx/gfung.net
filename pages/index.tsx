@@ -1,5 +1,4 @@
 import { FunctionalComponent } from 'preact';
-import Link from 'next/link';
 import { m } from 'framer-motion';
 
 import Container from 'components/Container';
@@ -27,11 +26,7 @@ const Home: FunctionalComponent = () => (
     </m.h1>
     <m.p className="landing-text" variants={fadeIn}>
       I'm a developer and student from Sydney, 🇦🇺. You've found my personal slice of the internet,
-      where I hope to record my personal progress as a front-end developer ✌️. Since you're here,
-      come and sign my{' '}
-      <Link href="/guestbook">
-        <span className="cursor-pointer underline">guestbook!</span>
-      </Link>
+      where I hope to record my personal progress as a front-end developer ✌️
     </m.p>
     <m.p className="landing-text" variants={fadeIn}>
       🚧 This site is still under development 🚧
