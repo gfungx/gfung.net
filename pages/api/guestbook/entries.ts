@@ -2,10 +2,14 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { MongoClient } from 'mongodb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const client = new MongoClient(process.env.MONGODB_URI!, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  });
+  const client = new MongoClient(
+    `mongodb+srv://${process.env.MONGODB_USER!}:${process.env
+      .MONGODB_PASSWORD!}@gfung.cwn09.mongodb.net?retryWrites=true&w=majority`,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }
+  );
 
   if (req.method === 'GET') {
     try {
