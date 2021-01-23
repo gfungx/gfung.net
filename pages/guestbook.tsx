@@ -2,6 +2,7 @@ import { FunctionalComponent } from 'preact';
 import { GetStaticProps } from 'next';
 import useSWR from 'swr';
 
+import client from 'lib/db';
 import fetcher from 'lib/fetcher';
 import Container from 'components/Container';
 import Add from 'components/Guestbook/Add';
@@ -21,11 +22,18 @@ const description = 'Sign my digital guestbook and share some wisdom.';
 const url = 'https://gfung.net/guestbook';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const entries = await fetcher('/api/guestbook/entries');
+  await client.connect();
+
+  const entries = await client
+    .db('guestbook')
+    .collection('entries')
+    .find({})
+    .sort({ createdAt: -1 })
+    .toArray();
 
   return {
     props: {
-      entries
+      entries: JSON.parse(JSON.stringify(entries))
     },
     revalidate: 60
   };
