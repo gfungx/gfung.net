@@ -1,8 +1,8 @@
 import { FunctionalComponent } from 'preact';
 import { GetStaticProps } from 'next';
+import { MongoClient } from 'mongodb';
 import useSWR from 'swr';
 
-import client from 'lib/db';
 import fetcher from 'lib/fetcher';
 import Container from 'components/Container';
 import Add from 'components/Guestbook/Add';
@@ -22,6 +22,15 @@ const description = 'Sign my digital guestbook and share some wisdom.';
 const url = 'https://gfung.net/guestbook';
 
 export const getStaticProps: GetStaticProps = async () => {
+  const client = new MongoClient(
+    `mongodb+srv://${process.env.MONGODB_USER!}:${process.env
+      .MONGODB_PASSWORD!}@gfung.cwn09.mongodb.net?retryWrites=true&w=majority`,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }
+  );
+
   await client.connect();
 
   const entries = await client
