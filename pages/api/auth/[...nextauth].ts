@@ -23,6 +23,14 @@ const options = {
     encryption: true,
     signingKey: process.env.NEXTAUTH_JWT_SIGNING_KEY,
     encryptionKey: process.env.NEXTAUTH_JWT_ENCRYPTION_KEY
+  },
+  callbacks: {
+    jwt: async (token: { auth_time: number }, user: any) => {
+      if (user) {
+        token.auth_time = Math.floor(Date.now() / 1000);
+      }
+      return Promise.resolve(token);
+    }
   }
 };
 
