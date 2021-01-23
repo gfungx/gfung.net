@@ -31,11 +31,13 @@ export const getStaticProps: GetStaticProps = async () => {
     .sort({ createdAt: -1 })
     .toArray();
 
+  await client.close();
+
   return {
     props: {
       entries: JSON.parse(JSON.stringify(entries))
     },
-    revalidate: 60
+    revalidate: 1
   };
 };
 
