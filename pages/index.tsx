@@ -26,15 +26,20 @@ const Home: FunctionalComponent = () => (
       Geoffrey
     </m.h1>
     <m.p className="landing-text" variants={fadeIn}>
-      I'm a developer and student from Sydney, 🇦🇺. You've found my personal slice of the internet,
-      where I hope to record my personal progress as a front-end developer ✌️. Whilst you're here,
-      come and sign my{' '}
+      I'm a developer and student from Sydney, 🇦🇺 and you've found my personal slice of the
+      internet. I'm still deciding what I should have on here, but whilst you're here, come and sign
+      my{' '}
       <Link href="/guestbook">
-        <span className="cursor-pointer underline">guestbook!</span>
+        <span className="cursor-pointer underline">guestbook</span>
       </Link>
+      !
     </m.p>
     <m.p className="landing-text" variants={fadeIn}>
-      🚧 This site is still under development 🚧
+      🚧 This site is still under development. Feel free to contribute{' '}
+      <a href="https://github.com/gfungx/gfung.net" target="_blank" className="underline">
+        here
+      </a>
+      . 🚧
     </m.p>
   </Container>
 );
