@@ -12,12 +12,7 @@ import Container from 'components/Container';
 import Entry from 'components/Guestbook/Entry';
 
 type GuestbookProps = {
-  entries: {
-    _id: number;
-    name: string;
-    comment: string;
-    createdAt: string;
-  }[];
+  entries: Entries;
 };
 
 const title = 'Guestbook';
