@@ -1,4 +1,5 @@
-import { FunctionalComponent } from 'preact';
+import type { FunctionalComponent } from 'preact';
+
 import Container from 'components/Container';
 
 const title = 'Privacy Policy';

@@ -1,6 +1,6 @@
-import { FunctionalComponent } from 'preact';
+import type { FunctionalComponent } from 'preact';
 
-import { Entries as EntriesType } from 'global';
+import type { Entries as EntriesType } from 'types/guestbook';
 import Entry from 'components/Guestbook/Entry';
 
 type EntriesProps = {

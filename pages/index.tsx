@@ -1,4 +1,4 @@
-import { FunctionalComponent } from 'preact';
+import type { FunctionalComponent } from 'preact';
 import Link from 'next/link';
 import { m } from 'framer-motion';
 

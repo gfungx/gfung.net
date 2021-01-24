@@ -1,4 +1,4 @@
-import { FunctionalComponent } from 'preact';
+import type { FunctionalComponent } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import { useSession, signOut } from 'next-auth/client';
 import { useRouter, NextRouter } from 'next/router';
@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import Filter from 'bad-words';
 import { mutate } from 'swr';
 
-import type { LoginButton as LoginButtonType, Entries, Entry } from 'global';
+import type { LoginButton as LoginButtonType, Entries, Entry } from 'types/guestbook';
 import LoginButton from 'components/Guestbook/LoginButton';
 import Message from 'components/Guestbook/Message';
 

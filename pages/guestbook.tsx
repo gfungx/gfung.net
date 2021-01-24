@@ -1,5 +1,5 @@
-import { FunctionalComponent } from 'preact';
-import { GetStaticProps } from 'next';
+import type { FunctionalComponent } from 'preact';
+import type { GetStaticProps } from 'next';
 import { MongoClient } from 'mongodb';
 import useSWR from 'swr';
 

@@ -1,4 +1,4 @@
-import { FunctionalComponent } from 'preact';
+import type { FunctionalComponent } from 'preact';
 import { NextSeo } from 'next-seo';
 import { m, Variants } from 'framer-motion';
 
