@@ -14,6 +14,10 @@ const options = {
       clientId: process.env.GITHUB_CLIENT_ID!,
       clientSecret: process.env.GITHUB_CLIENT_SECRET!,
       scope: 'user:email'
+    }),
+    Providers.Twitter({
+      clientId: process.env.TWITTER_CLIENT_ID!,
+      clientSecret: process.env.TWITTER_CLIENT_SECRET!
     })
   ],
   secret: process.env.NEXTAUTH_SECRET,

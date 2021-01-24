@@ -19,7 +19,7 @@ type Inputs = {
 };
 
 const loginButtons: LoginButtonType[] = [
-  { type: 'google', name: 'Google' },
+  { type: 'twitter', name: 'Twitter' },
   { type: 'github', name: 'Github' }
 ];
 
