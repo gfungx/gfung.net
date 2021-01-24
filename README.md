@@ -2,13 +2,22 @@
 
 Welcome to my personal website, my slice of the internet where I share my thoughts and experiences.
 
-## Technologies
+## Core Technologies
 
 - [Next.js](https://nextjs.org/)
 - [Preact](https://preactjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+
+## Libraries
+
 - [TailwindCSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
-- [MongoDB](https://www.mongodb.com/)
+- [Next-Auth](https://next-auth.js.org)
+- [next-seo](https://github.com/garmeeh/next-seo)
+- [SWR](https://swr.vercel.app/)
+- [react-hook-form](https://react-hook-form.com/)
+- [date-fns](https://date-fns.org/)
+- [bad-words](https://github.com/web-mech/badwords)
 
 ## Running Locally
 
