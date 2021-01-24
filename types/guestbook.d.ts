@@ -2,12 +2,12 @@ export type Entry = {
   _id?: number;
   name: string;
   comment: string;
-  createdAt: Date;
+  createdAt: Date | string;
 };
 
 export type Entries = Entry[];
 
-export type LoginButton = {
-  type: 'google' | 'github' | 'twitter';
-  name: 'Google' | 'Github' | 'Twitter';
+export type Login = {
+  type: 'github' | 'twitter';
+  name: 'Github' | 'Twitter';
 };

@@ -1,11 +1,7 @@
 import type { FunctionalComponent } from 'preact';
-import format from 'date-fns/format';
+import type { Entry as EntryProps } from 'types/guestbook';
 
-type EntryProps = {
-  name: string;
-  comment: string;
-  createdAt: Date;
-};
+import format from 'date-fns/format';
 
 const Entry: FunctionalComponent<EntryProps> = ({ name, comment, createdAt }) => (
   <div className="flex flex-col space-y-2">
