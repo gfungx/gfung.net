@@ -10,6 +10,7 @@ import useSWR from 'swr';
 import fetcher from 'lib/fetcher';
 import Container from 'components/Container';
 import Entry from 'components/Guestbook/Entry';
+import Spinner from 'components/Spinner';
 
 type GuestbookProps = {
   entries: Entries;
@@ -19,8 +20,8 @@ const title = 'Guestbook';
 const description = 'Sign my digital guestbook and share some wisdom.';
 const url = 'https://gfung.net/guestbook';
 
-const Sign = dynamic(() => import('components/Guestbook/Sign'));
-const Login = dynamic(() => import('components/Guestbook/Login'));
+const Sign = dynamic(() => import('components/Guestbook/Sign'), { loading: () => <Spinner /> });
+const Login = dynamic(() => import('components/Guestbook/Login'), { loading: () => <Spinner /> });
 
 export const getStaticProps: GetStaticProps = async () => {
   const client = new MongoClient(
