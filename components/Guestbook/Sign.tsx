@@ -1,4 +1,6 @@
-import { FunctionalComponent } from 'preact';
+import type { FunctionalComponent } from 'preact';
+import type { Entries, Entry } from 'types/guestbook';
+
 import { useEffect, useState } from 'preact/hooks';
 import { useSession } from 'next-auth/client';
 import { signOut } from 'next-auth/client';
@@ -7,7 +9,6 @@ import { useForm } from 'react-hook-form';
 import Filter from 'bad-words';
 import { mutate } from 'swr';
 
-import type { Entries, Entry } from 'types/guestbook';
 import Message from 'components/Guestbook/Message';
 
 type SignProps = {
@@ -55,7 +56,6 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
     });
 
     setEntries([payload, ...entries]);
-
     mutate('/api/guestbook/entries', [payload, ...entries], true);
     setIsPosted(true);
   };

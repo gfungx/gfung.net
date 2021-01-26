@@ -16,12 +16,11 @@ const Home: FunctionalComponent = () => (
     margin="max-w-xs sm:max-w-xl lg:max-w-5xl mt-40 sm:mt-64"
   >
     <m.h1 className="text-lg sm:text-3xl font-bold text-gray-800 pb-3" variants={fadeIn}>
-      Hey, I'm
+      👋 Hey, I'm
     </m.h1>
     <m.h1
       className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-primaryLight to-primaryDark pb-2 mb-2 text-5xl sm:text-8xl"
       variants={fadeIn}
-      key="init-hero"
     >
       Geoffrey
     </m.h1>
@@ -32,14 +31,11 @@ const Home: FunctionalComponent = () => (
       <Link href="/guestbook">
         <span className="cursor-pointer underline">guestbook</span>
       </Link>
-      !
-    </m.p>
-    <m.p className="landing-text" variants={fadeIn}>
-      🚧 This site is still under development. Feel free to contribute{' '}
+      ! This site is still under development. Feel free to contribute here on{' '}
       <a href="https://github.com/gfungx/gfung.net" target="_blank" className="underline">
-        here
+        GitHub
       </a>
-      . 🚧
+      .
     </m.p>
   </Container>
 );
