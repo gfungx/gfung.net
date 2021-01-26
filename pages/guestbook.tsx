@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import { useSession } from 'next-auth/client';
 import useSWR from 'swr';
 
-import fetcher from 'lib/fetcher';
+import fetcher from 'lib/internalFetcher';
 import Container from 'components/Container';
 import Entry from 'components/Guestbook/Entry';
 import Spinner from 'components/Spinner';
@@ -67,7 +67,7 @@ const Guestbook: FunctionalComponent<GuestbookProps> = ({ entries }) => {
         Welcome! Feel free to leave anything (within reason) down below. Maybe some wisdom or
         something educational, surprise me!
       </p>
-      <div className="w-full border bg-blue-50 border-blue-200 rounded p-6 mt-4">
+      <div className="w-full border bg-blue-50 border-blue-200 shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-150 rounded p-6 mt-4">
         {session ? <Sign initEntries={data!} /> : <Login />}
       </div>
       <div className="mt-8 space-y-8">
