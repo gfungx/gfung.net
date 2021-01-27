@@ -23,7 +23,7 @@ const Container: FunctionalComponent<ContainerProps> = ({
   margin = 'max-w-xs sm:max-w-md lg:max-w-2xl mt-24 sm:mt-40',
   variants = fadeIn
 }) => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   return (
     <>
@@ -44,7 +44,7 @@ const Container: FunctionalComponent<ContainerProps> = ({
       >
         <m.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} variants={variants}>
           <button
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
             className="bg-gray-200 dark:bg-gray-800 rounded absolute top-8 left-8 sm:top-12 sm:left-12 p-3 h-10 w-10"
           >
             <svg
@@ -54,7 +54,7 @@ const Container: FunctionalComponent<ContainerProps> = ({
               stroke="currentColor"
               className="h-4 w-4 text-gray-800 dark:text-gray-200"
             >
-              {theme === 'dark' ? (
+              {resolvedTheme === 'dark' ? (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
