@@ -3,7 +3,7 @@ import type { FunctionalComponent } from 'preact';
 import { NextSeo } from 'next-seo';
 import { m, Variants } from 'framer-motion';
 
-import Navbar from 'components/Navbar/Navbar';
+import Navbar from 'components/Navbar';
 import { fadeIn } from 'styles/animations';
 
 type ContainerProps = {
