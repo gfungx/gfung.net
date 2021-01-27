@@ -13,7 +13,7 @@ const url = 'https://gfung.net';
 const Home: FunctionalComponent = () => (
   <Container
     SEO={{ title, description, url }}
-    margin="max-w-xs sm:max-w-xl lg:max-w-5xl mt-40 sm:mt-64"
+    margin="max-w-xs sm:max-w-xl lg:max-w-5xl mt-28 sm:mt-52"
   >
     <m.h1
       className="text-lg sm:text-3xl font-bold text-gray-800 dark:text-gray-200 pb-3"
