@@ -14,7 +14,7 @@ import SEO from 'next-seo.config';
 const App = ({ Component, pageProps }: AppProps) => (
   <>
     <DefaultSeo {...SEO} />
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" enableSystem defaultTheme="system">
       <MotionConfig features={[AnimationFeature, ExitFeature]}>
         <Provider session={pageProps.session}>
           <Component {...pageProps} />
