@@ -83,15 +83,13 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
   }
   return (
     <>
-      <h5 className="text-lg sm:text-xl font-bold text-gray-900">
-        Thanks for logging in, you're all set!
-      </h5>
+      <h5 className="guestbook-header">Thanks for logging in, you're all set!</h5>
       <form onSubmit={handleSubmit(onSubmit)} className="relative my-4">
         <input
           name="comment"
           aria-label="Your message"
           placeholder="Your message..."
-          className="block w-full border-gray-300 rounded-md bg-white pl-4 pr-32 py-2 mt-1"
+          className="block w-full bg-white dark:bg-gray-700 border-gray-300 rounded-md pl-4 pr-32 py-2 mt-1"
           ref={register({
             required: `You want to say something, don't you?`,
             validate: {
@@ -101,7 +99,7 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
         />
         <button
           type="submit"
-          className="flex items-center justify-center absolute right-1 top-1 px-4 font-bold h-8 bg-gray-100 rounded w-28"
+          className="flex items-center justify-center absolute font-bold bg-gray-100 dark:bg-gray-900 rounded right-1 top-1 h-8 px-4 w-28"
         >
           Sign
         </button>

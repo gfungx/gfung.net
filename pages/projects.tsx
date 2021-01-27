@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Projects: FunctionalComponent<ProjectsProps> = ({ projects }) => (
   <Container SEO={{ title, description, url }}>
-    <h1 className="font-bold text-5xl">Projects</h1>
+    <h1 className="heading">Projects</h1>
     <p className="my-4">
       Although I'm a busy student most days, I've found some time to work on some projects. I mainly
       focus on building web apps with{' '}

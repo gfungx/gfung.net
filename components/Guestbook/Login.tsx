@@ -10,9 +10,7 @@ const loginButtons: LoginType[] = [
 
 const Login: FunctionalComponent = () => (
   <>
-    <h5 className="text-lg sm:text-xl font-bold text-gray-900">
-      To sign the guestbook, login first
-    </h5>
+    <h5 className="guestbook-header">To sign the guestbook, login first</h5>
     <div className="flex">
       {loginButtons.map(({ type, name }) => (
         <LoginButton type={type} name={name} key={type} />

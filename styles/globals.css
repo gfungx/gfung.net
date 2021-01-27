@@ -10,10 +10,17 @@
 }
 
 body {
-  background-color: rgba(252, 252, 252);
-  @apply text-gray-800;
+  @apply bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200;
 }
 
 .landing-text {
-  @apply text-xs sm:text-lg text-gray-700 mt-2;
+  @apply text-xs sm:text-lg text-gray-700 dark:text-gray-200 mt-2;
+}
+
+.heading {
+  @apply font-bold text-5xl dark:text-gray-200;
+}
+
+.guestbook-header {
+  @apply text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-200;
 }

@@ -11,7 +11,7 @@ const Project: FunctionalComponent<ProjectProps> = ({
   html_url,
   homepage
 }) => (
-  <div className="h-48 rounded-lg border border-gray-200 shadow-lg transform hover:scale-105 hover:border-gray-500 hover:shadow-2xl transition duration-200 pt-6 p-8">
+  <div className="h-48 rounded-lg border border-gray-200 dark:border-gray-600 shadow-lg transform hover:scale-105 hover:border-gray-500 dark:hover:border-gray-100 hover:shadow-2xl transition duration-200 pt-6 p-8">
     <div className="flex justify-between">
       <h1 className="font-bold text-2xl">{name}</h1>
       <h1 className="pt-1">

@@ -15,7 +15,10 @@ const Home: FunctionalComponent = () => (
     SEO={{ title, description, url }}
     margin="max-w-xs sm:max-w-xl lg:max-w-5xl mt-40 sm:mt-64"
   >
-    <m.h1 className="text-lg sm:text-3xl font-bold text-gray-800 pb-3" variants={fadeIn}>
+    <m.h1
+      className="text-lg sm:text-3xl font-bold text-gray-800 dark:text-gray-200 pb-3"
+      variants={fadeIn}
+    >
       👋 Hey, I'm
     </m.h1>
     <m.h1

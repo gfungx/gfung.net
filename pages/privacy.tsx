@@ -8,7 +8,7 @@ const url = 'https://gfung.net/privacy';
 
 const Privacy: FunctionalComponent = () => (
   <Container SEO={{ title, description, url }}>
-    <h1 className="font-bold text-5xl">Our Privacy Policy</h1>
+    <h1 className="heading">Our Privacy Policy</h1>
     <br />
     <p>
       gfung.net is committed to providing quality services to you and this policy outlines our
