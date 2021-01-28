@@ -28,16 +28,13 @@ const Home: FunctionalComponent = () => (
       Geoffrey
     </m.h1>
     <m.p className="landing-text" variants={fadeIn}>
-      I'm a developer and student from Sydney, 🇦🇺 and you've found my personal slice of the
-      internet. I'm still deciding what I should have on here, but you can check out the{' '}
-      <span className="cursor-pointer underline">
-        <Link href="/projects">projects</Link>
-      </span>{' '}
-      that I've been working on so far. And whilst you're here, come and sign my{' '}
-      <span className="cursor-pointer underline">
-        <Link href="/guestbook">guestbook</Link>
-      </span>
-      ! This site is still under development.
+      Welcome! I'm a student and developer from Sydney, 🇦🇺 and this is the small slice of the
+      internet that I call my own. I'm still deciding what to put on here, but in the meantime, come
+      and sign my{' '}
+      <Link href="/guestbook">
+        <span className="underline cursor-pointer">guestbook</span>
+      </Link>
+      ! ✨
     </m.p>
   </Container>
 );

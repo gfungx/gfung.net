@@ -41,7 +41,7 @@ const Project: FunctionalComponent<ProjectProps> = ({
         <>
           <p className="inline-block">|</p>{' '}
           <a href={homepage} target="_blank" className="inline-block">
-            Homepage{' '}
+            Live{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
