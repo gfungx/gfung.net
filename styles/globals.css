@@ -6,6 +6,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400 900;
+  font-display: optional;
   src: url('/fonts/inter.woff2') format('woff2');
 }
 

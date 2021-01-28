@@ -11,6 +11,7 @@ const Navbar: FunctionalComponent = () => {
       <button
         onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
         className="bg-gray-200 dark:bg-gray-800 rounded p-3 h-10 w-10"
+        aria-label="Toggle Light/Dark Mode"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
