@@ -16,11 +16,6 @@ body {
 
 .nav {
   backdrop-filter: saturate(180%) blur(20px);
-  transition: background-color 0.1 ease-in-out;
-}
-
-.landing-text {
-  @apply text-xs sm:text-lg text-gray-700 dark:text-gray-200 mt-2;
 }
 
 .heading {

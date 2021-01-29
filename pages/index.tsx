@@ -27,7 +27,7 @@ const Home: FunctionalComponent = () => (
     >
       Geoffrey
     </m.h1>
-    <m.p className="landing-text" variants={fadeIn}>
+    <m.p className="text-xs sm:text-lg text-gray-700 dark:text-gray-200 mt-4" variants={fadeIn}>
       Welcome! I'm a student and developer from Sydney, 🇦🇺 and this is the small slice of the
       internet that I call my own. I'm still deciding what to put on here, but in the meantime, come
       and sign my{' '}
