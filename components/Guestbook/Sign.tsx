@@ -9,8 +9,6 @@ import { useForm } from 'react-hook-form';
 import Filter from 'bad-words';
 import { mutate } from 'swr';
 
-import Message from 'components/Guestbook/Message';
-
 type SignProps = {
   initEntries: Entries;
 };
@@ -67,18 +65,18 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
   }, [isSubmitSuccessful, reset]);
 
   if (errors.comment?.message) {
-    message = <Message>{errors.comment?.message}</Message>;
+    message = <p className="message">{errors.comment?.message}</p>;
   } else if (isPosted) {
-    message = <Message>🎉 Hooray! Thanks for signing! 🎉</Message>;
+    message = <p className="message">🎉 Hooray! Thanks for signing! 🎉</p>;
   } else if (session) {
     message = (
-      <Message>
+      <p className="message">
         You are currently signed in as {session.user.name}
         {session.user.email ? ` (${session.user.email})` : ''}.{' '}
         <span onClick={() => handleSignOut(router)} className="underline cursor-pointer">
           Sign out
         </span>
-      </Message>
+      </p>
     );
   }
   return (
@@ -87,9 +85,10 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
       <form onSubmit={handleSubmit(onSubmit)} className="relative my-4">
         <input
           name="comment"
+          type="text"
           aria-label="Your message"
           placeholder="Your message..."
-          className="block w-full bg-white dark:bg-gray-700 border-gray-300 rounded-md pl-4 pr-32 py-2 mt-1"
+          className="input input-effects w-full pl-4 pr-32"
           ref={register({
             required: `You want to say something, don't you?`,
             validate: {
@@ -99,7 +98,7 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
         />
         <button
           type="submit"
-          className="flex items-center justify-center absolute font-bold bg-gray-100 dark:bg-gray-900 rounded right-1 top-1 h-8 px-4 w-28"
+          className="flex items-center justify-center absolute font-bold bg-gray-100 dark:bg-gray-900 outline-none transition hover:bg-gray-200 dark:hover:bg-gray-800 duration-200 rounded right-1 top-1 h-8 px-4 w-28"
         >
           Sign
         </button>

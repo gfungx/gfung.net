@@ -21,7 +21,7 @@ const Container: FunctionalComponent<ContainerProps> = ({
   children,
   SEO: { title, description, url },
   styles = '',
-  margin = 'max-w-xs sm:max-w-md lg:max-w-2xl mt-8 sm:mt-24',
+  margin = 'max-w-xs sm:max-w-md lg:max-w-2xl mt-8 sm:mt-16',
   variants = fadeIn
 }) => (
   <>

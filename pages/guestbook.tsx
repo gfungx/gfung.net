@@ -63,7 +63,7 @@ const Guestbook: FunctionalComponent<GuestbookProps> = ({ entries }) => {
   return (
     <Container SEO={{ title, description, url }}>
       <h1 className="heading">Guestbook</h1>
-      <p className="my-4">
+      <p className="text-lg my-4">
         Welcome! Feel free to leave anything (within reason) down below. Maybe some wisdom or
         something educational, surprise me!
       </p>

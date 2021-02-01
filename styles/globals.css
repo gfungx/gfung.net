@@ -25,3 +25,15 @@ body {
 .guestbook-header {
   @apply text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-200;
 }
+
+.message {
+  @apply text-sm mt-4 -mb-6;
+}
+
+.input {
+  @apply block bg-white dark:bg-gray-700 outline-none rounded-md py-2 mt-1;
+}
+
+.input-effects {
+  @apply hover:ring-blue-100 dark:hover:ring-gray-600 hover:ring-2 focus:ring-blue-200 dark:focus:ring-gray-500 focus:ring-2;
+}

@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const Projects: FunctionalComponent<ProjectsProps> = ({ projects }) => (
   <Container SEO={{ title, description, url }}>
     <h1 className="heading">Projects</h1>
-    <p className="my-4">
+    <p className="text-lg my-4">
       Although I'm a busy student most days, I've found some time to work on some projects. I mainly
       focus on building web apps with{' '}
       <a href="https://reactjs.org/" target="_blank" className="underline">
@@ -37,10 +37,6 @@ const Projects: FunctionalComponent<ProjectsProps> = ({ projects }) => (
       and{' '}
       <a href="https://nextjs.org" target="_blank" className="underline">
         Next.js
-      </a>
-      . I'm always looking to learn something new, especially delving into machine learning and{' '}
-      <a href="https://graphql.org/" target="_blank" className="underline">
-        GraphQL
       </a>
       . Anyways, here some of my projects that you can find on my{' '}
       <a href="https://github.com/gfungx" target="_blank" className="underline">

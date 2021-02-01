@@ -18,6 +18,8 @@ Welcome to my personal website, my slice of the internet where I share my though
 - [react-hook-form](https://react-hook-form.com/)
 - [date-fns](https://date-fns.org/)
 - [bad-words](https://github.com/web-mech/badwords)
+- [nodemailer](https://nodemailer.com/about/)
+- [react-google-recaptcha](https://github.com/dozoisch/react-google-recaptcha)
 
 ## Running Locally
 
@@ -43,6 +45,10 @@ GITHUB_CLIENT_ID={GitHub client ID}
 GITHUB_CLIENT_SECRET={GitHub client secret}
 TWITTER_CLIENT_ID={Twitter client ID}
 TWITTER_CLIENT_SECRET={Twitter client secret}
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY={ReCAPTCHA Site Key}
+RECAPTCHA_SECRET={ReCAPTCHA Secret}
+EMAIL={Gmail Address}
+PASSWORD={Gmail password}
 ```
 
 Then, get the local server running

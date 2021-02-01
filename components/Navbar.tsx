@@ -46,8 +46,8 @@ const Navbar: FunctionalComponent = () => {
           <a className="font-bold text-md sm:text-lg dark:text-gray-200 p-1 sm:p-4">Guestbook</a>
         </Link>
         <p className="inline-block text-md sm:text-lg text-gray-300 mx-1 sm:mx-0">/</p>
-        <Link href="/">
-          <a className="font-bold text-md sm:text-lg dark:text-gray-200 p-1 sm:p-4">Home</a>
+        <Link href="/contact">
+          <a className="font-bold text-md sm:text-lg dark:text-gray-200 p-1 sm:p-4">Contact</a>
         </Link>
       </div>
     </nav>
