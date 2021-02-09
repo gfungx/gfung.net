@@ -49,6 +49,7 @@ NEXT_PUBLIC_RECAPTCHA_SITE_KEY={ReCAPTCHA Site Key}
 RECAPTCHA_SECRET={ReCAPTCHA Secret}
 EMAIL={Gmail Address}
 PASSWORD={Gmail password}
+NEXT_PUBLIC_GTAG={Google Analytics Global Site Tag}
 ```
 
 Then, get the local server running
