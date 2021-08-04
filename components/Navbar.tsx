@@ -37,18 +37,26 @@ const Navbar: FunctionalComponent = () => {
           )}
         </svg>
       </button>
-      <div className="mt-2">
+      <div className="mt-2 text-right sm:text-left">
+        <Link href="/">
+          <a className="text-md sm:text-lg font-bold dark:text-gray-200 p-1 sm:p-4">Home</a>
+        </Link>
+        <p className="inline-block text-md sm:text-lg text-gray-300 mx-1 sm:mx-0">/</p>
         <Link href="/projects">
           <a className="text-md sm:text-lg font-bold dark:text-gray-200 p-1 sm:p-4">Projects</a>
         </Link>
-        <p className="inline-block text-md sm:text-lg text-gray-300 mx-1 sm:mx-0">/</p>
-        <Link href="/guestbook">
-          <a className="font-bold text-md sm:text-lg dark:text-gray-200 p-1 sm:p-4">Guestbook</a>
-        </Link>
-        <p className="inline-block text-md sm:text-lg text-gray-300 mx-1 sm:mx-0">/</p>
-        <Link href="/contact">
-          <a className="font-bold text-md sm:text-lg dark:text-gray-200 p-1 sm:p-4">Contact</a>
-        </Link>
+        <div className="block sm:inline-block">
+          <p className="sm:inline-block text-md sm:text-lg text-gray-300 mx-1 sm:mx-0 hidden sm:visible">
+            /
+          </p>
+          <Link href="/guestbook">
+            <a className="font-bold text-md sm:text-lg dark:text-gray-200 p-1 sm:p-4">Guestbook</a>
+          </Link>
+          <p className="inline-block text-md sm:text-lg text-gray-300 mx-1 sm:mx-0">/</p>
+          <Link href="/contact">
+            <a className="font-bold text-md sm:text-lg dark:text-gray-200 p-1 sm:p-4">Contact</a>
+          </Link>
+        </div>
       </div>
     </nav>
   );
