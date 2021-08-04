@@ -39,7 +39,7 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
 
   const onSubmit = async (data: Inputs) => {
     const payload: Entry = {
-      name: filter.clean(session?.user.name!),
+      name: filter.clean(session!.user!.name!),
       comment: filter.clean(data.comment),
       createdAt: new Date()
     };
@@ -71,8 +71,8 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
   } else if (session) {
     message = (
       <p className="message">
-        You are currently signed in as {session.user.name}
-        {session.user.email ? ` (${session.user.email})` : ''}.{' '}
+        You are currently signed in as {session!.user!.name}
+        {session!.user!.email ? ` (${session!.user!.email})` : ''}.{' '}
         <span onClick={() => handleSignOut(router)} className="underline cursor-pointer">
           Sign out
         </span>
