@@ -42,7 +42,7 @@ const Projects: FunctionalComponent<ProjectsProps> = ({ projects }) => (
       <a href="https://github.com/gfungx" target="_blank" className="underline">
         GitHub
       </a>{' '}
-      page!
+      page.
     </p>
     <div className="grid gap-4 lg:grid-cols-2 mt-6">
       {projects.map(project => (

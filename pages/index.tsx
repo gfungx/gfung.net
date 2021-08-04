@@ -34,7 +34,7 @@ const Home: FunctionalComponent = () => (
       <Link href="/guestbook">
         <span className="underline cursor-pointer">guestbook</span>
       </Link>
-      ! ✨
+      . ✨
     </m.p>
   </Container>
 );
