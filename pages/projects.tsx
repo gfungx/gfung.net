@@ -38,7 +38,7 @@ const Projects: FunctionalComponent<ProjectsProps> = ({ projects }) => (
       <a href="https://nextjs.org" target="_blank" className="underline">
         Next.js
       </a>
-      . Anyways, here some of my projects that you can find on my{' '}
+      . Anyways, here are some of my projects that you can find on my{' '}
       <a href="https://github.com/gfungx" target="_blank" className="underline">
         GitHub
       </a>{' '}
