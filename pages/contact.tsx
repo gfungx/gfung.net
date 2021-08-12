@@ -29,7 +29,7 @@ const Contact: FunctionalComponent = () => {
   const [missedRecaptcha, setMissedRecaptcha] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const recaptchaRef = useRef<ReCAPTCHA>();
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const onSubmit = async (data: Inputs) => {
     if (!isVerified) {
