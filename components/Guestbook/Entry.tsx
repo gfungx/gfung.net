@@ -34,7 +34,7 @@ const Entry: FunctionalComponent<EntryProps> = ({ name, comment, email, createdA
           <p className="text-sm text-gray-400">
             {createdAt ? format(new Date(createdAt), "d MMM yyyy 'at' h:mm bb") : null}
           </p>
-          {session?.user?.email === email ? (
+          {session?.user?.email === email && email !== undefined ? (
             <div onClick={onSubmit}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
