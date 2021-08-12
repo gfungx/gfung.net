@@ -20,7 +20,8 @@ module.exports = {
   variants: {
     extend: {
       ringWidth: ['hover'],
-      ringColor: ['hover']
+      ringColor: ['hover'],
+      stroke: ['hover']
     }
   },
   plugins: []

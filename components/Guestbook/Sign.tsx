@@ -41,6 +41,7 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
     const payload: Entry = {
       name: filter.clean(session!.user!.name!),
       comment: filter.clean(data.comment),
+      email: session!.user!.email!,
       createdAt: new Date()
     };
 

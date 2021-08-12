@@ -14,13 +14,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   );
 
-  if (req.method === 'POST' && session) {
+  if (req.method === 'DELETE' && session) {
     try {
       await client.connect();
 
       const collection = client.db('guestbook').collection('entries');
 
-      await collection.insertOne({
+      await collection.deleteOne({
         name: req.body.name,
         comment: req.body.comment,
         email: req.body.email,

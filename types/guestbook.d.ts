@@ -2,7 +2,9 @@ export type Entry = {
   _id?: number;
   name: string;
   comment: string;
+  email: string;
   createdAt: Date;
+  data?: Entries;
 };
 
 export type Entries = Entry[];
