@@ -42,7 +42,7 @@ const Contact: FunctionalComponent = () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          recaptcha: recaptchaRef.current.getValue(),
+          recaptcha: recaptchaRef.current!.getValue(),
           email: data.email,
           title: data.title,
           message: data.message
@@ -56,7 +56,7 @@ const Contact: FunctionalComponent = () => {
   useEffect(() => {
     if (isSubmitted) {
       reset();
-      recaptchaRef.current.reset();
+      recaptchaRef.current!.reset();
     }
   }, [isSubmitted, reset, recaptchaRef]);
 
