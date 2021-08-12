@@ -64,8 +64,8 @@ const Guestbook: FunctionalComponent<GuestbookProps> = ({ entries }) => {
     <Container SEO={{ title, description, url }}>
       <h1 className="heading">Guestbook</h1>
       <p className="text-lg my-4">
-        Welcome! Feel free to leave anything (within reason) down below. Maybe some wisdom or
-        something educational, surprise me!
+        Feel free to leave anything (within reason) down below. Maybe some wisdom or something
+        educational, surprise me!
       </p>
       <div className="w-full border bg-blue-50 dark:bg-blue-opaque border-blue-100 dark:border-gray-800 shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-150 rounded p-6 mt-4">
         {session ? <Sign initEntries={data!} /> : <Login />}

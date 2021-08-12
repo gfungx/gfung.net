@@ -4,8 +4,8 @@ import type { Login as LoginType } from 'types/guestbook';
 import LoginButton from 'components/Guestbook/LoginButton';
 
 const loginButtons: LoginType[] = [
-  { type: 'twitter', name: 'Twitter' },
-  { type: 'github', name: 'Github' }
+  { type: 'google', name: 'Google' },
+  { type: 'twitter', name: 'Twitter' }
 ];
 
 const Login: FunctionalComponent = () => (

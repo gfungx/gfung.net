@@ -8,6 +8,6 @@ export type Entry = {
 export type Entries = Entry[];
 
 export type Login = {
-  type: 'github' | 'twitter';
-  name: 'Github' | 'Twitter';
+  type: 'google' | 'twitter';
+  name: 'Google' | 'Twitter';
 };
