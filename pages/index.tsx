@@ -19,7 +19,7 @@ const Home: FunctionalComponent = () => (
       className="text-lg sm:text-3xl font-bold text-gray-800 dark:text-gray-200 pb-3"
       variants={fadeIn}
     >
-      👋 Hey, I'm
+      <span className="waving-hand">👋</span> Hey, I'm
     </m.h1>
     <m.h1
       className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-primaryLight to-primaryDark pb-2 mb-2 text-5xl sm:text-8xl"
