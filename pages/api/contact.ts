@@ -4,9 +4,16 @@ import nodemailer, { SendMailOptions } from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL,
-    pass: process.env.PASSWORD
+    pass: process.env.PASSWORD,
+    clientId: process.env.EMAIL_CLIENT_ID,
+    clientSecret: process.env.EMAIL_CLIENT_SECRET,
+    refreshToken: process.env.EMAIL_REFRESH_TOKEN,
+    accessToken: process.env.EMAIL_ACCESS_TOKEN
   }
 });
 
