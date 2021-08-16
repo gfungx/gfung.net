@@ -35,10 +35,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       replyTo: email
     };
 
-    transporter.sendMail(mail, err => res.send(`Sorry, something went wrong: ${err}`));
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mail, (err, info) => {
+        if (err) {
+          reject(err);
+        }
+        if (info) {
+          resolve(info);
+        }
+      });
+    });
 
     res.status(200).send('Success!');
   } else {
-    res.status(400).send('Please use the webform');
+    res.status(400).send('Please use the webform and complete the ReCAPTCHA.');
   }
 }
