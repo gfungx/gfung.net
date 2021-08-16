@@ -52,10 +52,10 @@ const Navbar: FunctionalComponent = () => {
           <Link href="/guestbook">
             <a className="font-bold text-md sm:text-lg dark:text-gray-200 p-1 sm:p-4">Guestbook</a>
           </Link>
-          <p className="inline-block text-md sm:text-lg text-gray-300 mx-1 sm:mx-0">/</p>
+          {/* <p className="inline-block text-md sm:text-lg text-gray-300 mx-1 sm:mx-0">/</p>
           <Link href="/contact">
             <a className="font-bold text-md sm:text-lg dark:text-gray-200 p-1 sm:p-4">Contact</a>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>
