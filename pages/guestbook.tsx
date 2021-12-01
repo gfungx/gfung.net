@@ -71,14 +71,14 @@ const Guestbook: FunctionalComponent<GuestbookProps> = ({ entries }) => {
         {session ? <Sign initEntries={data!} /> : <Login />}
       </div>
       <div className="mt-8 space-y-8">
-        {data!.map(({ name, comment, email, createdAt }) => (
+        {data!.map(({ name, comment, email, createdAt, _id }) => (
           <Entry
             name={name}
             comment={comment}
             email={email}
             createdAt={createdAt}
             key={`${comment}${createdAt}`}
-            data={data!}
+            id={_id!}
           />
         ))}
       </div>

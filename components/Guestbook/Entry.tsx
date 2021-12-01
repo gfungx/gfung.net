@@ -5,11 +5,9 @@ import { useSession } from 'next-auth/client';
 import { useRouter } from 'next/router';
 import format from 'date-fns/format';
 
-const Entry: FunctionalComponent<EntryProps> = ({ name, comment, email, createdAt, data }) => {
+const Entry: FunctionalComponent<EntryProps> = ({ name, comment, email, createdAt, id }) => {
   const [session] = useSession();
   const router = useRouter();
-
-  const Entry = { name, comment, email, createdAt };
 
   const onSubmit = async () => {
     await fetch('/api/guestbook/delete', {
@@ -18,7 +16,7 @@ const Entry: FunctionalComponent<EntryProps> = ({ name, comment, email, createdA
         Accept: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(Entry)
+      body: JSON.stringify(id)
     });
 
     router.reload();

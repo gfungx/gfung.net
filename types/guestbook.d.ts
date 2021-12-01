@@ -4,7 +4,7 @@ export type Entry = {
   comment: string;
   email: string;
   createdAt: Date;
-  data?: Entries;
+  id?: number;
 };
 
 export type Entries = Entry[];

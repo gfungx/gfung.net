@@ -45,7 +45,7 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
       createdAt: new Date()
     };
 
-    await fetch('/api/guestbook/create', {
+    const res = await fetch('/api/guestbook/create', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -53,6 +53,9 @@ const Sign: FunctionalComponent<SignProps> = ({ initEntries }) => {
       },
       body: JSON.stringify(payload)
     });
+
+    const newData = await res.json();
+    console.log(newData);
 
     setEntries([payload, ...entries]);
     mutate('/api/guestbook/entries', [payload, ...entries], true);

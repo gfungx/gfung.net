@@ -19,7 +19,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment"
+    "jsxFragmentFactory": "Fragment",
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",

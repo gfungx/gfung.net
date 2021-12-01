@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getSession } from 'next-auth/client';
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = await getSession({ req });
@@ -14,23 +14,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   );
 
-  if (req.method === 'POST' && session) {
+  await client.connect();
+  const collection = client.db('guestbook').collection('entries');
+
+  const alreadyCommented = await collection.findOne({ email: req.body.email });
+
+  if (req.method === 'POST' && session && !alreadyCommented) {
     try {
-      await client.connect();
-
-      const collection = client.db('guestbook').collection('entries');
-
       await collection.insertOne({
         name: req.body.name,
         comment: req.body.comment,
         email: req.body.email,
         createdAt: req.body.createdAt
       });
+      res.send('Complete');
     } finally {
       await client.close();
     }
   } else {
-    res.status(404);
+    res.status(404).send('fail');
   }
 
   res.end();

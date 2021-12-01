@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getSession } from 'next-auth/client';
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = await getSession({ req });
@@ -17,15 +17,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'DELETE' && session) {
     try {
       await client.connect();
-
-      const collection = client.db('guestbook').collection('entries');
-
-      await collection.deleteOne({
-        name: req.body.name,
-        comment: req.body.comment,
-        email: req.body.email,
-        createdAt: req.body.createdAt
-      });
+      await client
+        .db('guestbook')
+        .collection('entries')
+        .findOneAndDelete({ _id: new ObjectId(req.body) });
     } finally {
       await client.close();
     }
